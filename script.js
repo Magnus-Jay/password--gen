@@ -16,42 +16,57 @@ function writePassword() {
 
 }
 
+// function generatePassword() {
+
+
 var pwdLength = prompt("How long would you like the password to be?")
     console.log(pwdLength)
 
 var loCase = confirm("Would you like to a lower case character?")
-    if (loCase) {
-      finalPass.push(loCase)
 
-    }
+    if (loCase) {
+      for (i = 0; i < lwrCase.length;i++) 
+        finalPass.push(loCase[i])
+        // console.log(finalPass)
+      }
+      
+
+    
 
     var upCase = confirm("Would you like to an upper case character?")
     if (upCase) {
-      finalPass.push(upCase)
+      for (i = 0; i < upprCase.length;i++) 
+      finalPass.push(upCase[i])
+      // console.log(finalPass)
+      
 
     }
 
     var spChar = confirm("Would you like to a special character?")
     if (spChar) {
-      finalPass.push(spChar)
+      for (i = 0; i < spclChar.length;i++) 
+      finalPass.push(spChar[i])
+      // console.log(finalPass)
 
     }
 
     var num = confirm("Would you like to an upper case character?")
     if (num) {
-      finalPass.push(num)
+      for (i = 0; i < rdmNum.length;i++) 
+      finalPass.push(rdmNum[i])
+      console.log(finalPass)
 
     }
 
     
 
-function generatePassword() {
 
 
 
 
 
-}
+
+// }
 
 
 // Add event listener to generate button
