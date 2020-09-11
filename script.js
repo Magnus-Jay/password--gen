@@ -21,8 +21,29 @@ var pwdLength = prompt("How long would you like the password to be?")
 
 var loCase = confirm("Would you like to a lower case character?")
     if (loCase) {
+      finalPass.push(loCase)
 
     }
+
+    var upCase = confirm("Would you like to an upper case character?")
+    if (upCase) {
+      finalPass.push(upCase)
+
+    }
+
+    var spChar = confirm("Would you like to a special character?")
+    if (spChar) {
+      finalPass.push(spChar)
+
+    }
+
+    var num = confirm("Would you like to an upper case character?")
+    if (num) {
+      finalPass.push(num)
+
+    }
+
+    
 
 function generatePassword() {
 
