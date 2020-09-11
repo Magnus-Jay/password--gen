@@ -5,6 +5,8 @@ var lwrCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 var upprCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var spclChar = ["!", "@", "#", "$", "%", "&", "*", "?"]
 var finalPass = []
+var passMin = 8
+var passMax = 128 
 
 // Write password to the #password input
 function writePassword() {
@@ -16,7 +18,7 @@ function writePassword() {
 
 }
 
-// function generatePassword() {
+function generatePassword() {
 
 
 var pwdLength = prompt("How long would you like the password to be?")
@@ -26,7 +28,7 @@ var loCase = confirm("Would you like to a lower case character?")
 
     if (loCase) {
       for (i = 0; i < lwrCase.length;i++) 
-        finalPass.push(loCase[i])
+        finalPass.push(lwrCase[i])
         // console.log(finalPass)
       }
       
@@ -36,7 +38,7 @@ var loCase = confirm("Would you like to a lower case character?")
     var upCase = confirm("Would you like to an upper case character?")
     if (upCase) {
       for (i = 0; i < upprCase.length;i++) 
-      finalPass.push(upCase[i])
+      finalPass.push(upprCase[i])
       // console.log(finalPass)
       
 
@@ -45,7 +47,7 @@ var loCase = confirm("Would you like to a lower case character?")
     var spChar = confirm("Would you like to a special character?")
     if (spChar) {
       for (i = 0; i < spclChar.length;i++) 
-      finalPass.push(spChar[i])
+      finalPass.push(spclChar[i])
       // console.log(finalPass)
 
     }
@@ -58,15 +60,9 @@ var loCase = confirm("Would you like to a lower case character?")
 
     }
 
+    return "Password here"
     
-
-
-
-
-
-
-
-// }
+}
 
 
 // Add event listener to generate button
