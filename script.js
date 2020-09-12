@@ -1,40 +1,31 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var rdmNum = ["0" , "1", "3", "4", "5", "6", "7", "8", "9" ]
+var rdmNum = ["0" , "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
 var lwrCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var upprCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var spclChar = ["!", "@", "#", "$", "%", "&", "*", "?"]
 var finalPass = []
+var passGen = []
 // var password = ""
 
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
   
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
+// }
 
 // function generatePassword() {
 
-
-var pwdLength = prompt("How long would you like the password to be?")
+    var pwdLength = prompt("How long would you like the password to be?")
     // console.log(pwdLength)
     if (pwdLength < 8 || pwdLength > 128) {
       prompt("You must choose a value between 8 and 128")
     }
-
-var loCase = confirm("Would you like to a lower case character?")
-
-    if (loCase) {
-      for (i = 0; i < lwrCase.length;i++) 
-        finalPass.push(lwrCase[i])
-        // console.log(finalPass)
-      }
-      
 
     
 
@@ -63,18 +54,25 @@ var loCase = confirm("Would you like to a lower case character?")
 
     }
 
-    for ( i = 0; i < pwdLength.length; i++) {
-      console.log(pwdLength)
+    // for ( i = 0; i < pwdLength; i++) { 
+    //   pwdLength.push(finalPass)
+    //   console.log(pwdLength)
+      
       
 
-  
+      // for( i = 0; i <finalPass.length; i++){
+      //   var userPassword = Math.floor(Math.random()*finalPass.length);
+      //   console.log(userPassword)
+      // }
 
+      let passChar = pwdLength[Math.floor(Math.random() * pwdLength.length)];
+     
+// }
 
-      // password = password + finalPass.chartAt(Math.floor(Math.random) * pwdLength);
-    // return "Password here"
+      
+
     
-}
-
+ 
 
 // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
