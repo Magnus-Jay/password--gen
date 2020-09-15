@@ -5,34 +5,37 @@ var lwrCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 var upprCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var spclChar = ["!", "@", "#", "$", "%", "&", "*", "?"]
 var finalPass = []
-var passGen = []
+var passGen = ""
 // var password = ""
 
 
 // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
   
 
-//   passwordText.value = password;
+  passwordText.value = password;
 
-// }
+}
 
-// function generatePassword() {
-
+function generatePassword() {
+  // console.log("generatePassword");
     var pwdLength = prompt("How long would you like the password to be?")
     // console.log(pwdLength)
     if (pwdLength < 8 || pwdLength > 128) {
       prompt("You must choose a value between 8 and 128")
+      pwdLength = prompt("You must choose a value between 8 and 128")
+
     }
 
     
 
     var upCase = confirm("Would you like to an upper case character?")
     if (upCase) {
-      for (i = 0; i < upprCase.length;i++) 
+      for (var i = 0; i < upprCase.length;i++) {
       finalPass.push(upprCase[i])
+      }
       // console.log(finalPass)
       
 
@@ -40,19 +43,26 @@ var passGen = []
 
     var spChar = confirm("Would you like to a special character?")
     if (spChar) {
-      for (i = 0; i < spclChar.length;i++) 
+      for (var i = 0; i < spclChar.length;i++) {
       finalPass.push(spclChar[i])
+      }
       // console.log(finalPass)
 
     }
 
     var num = confirm("Would you like to an upper case character?")
     if (num) {
-      for (i = 0; i < rdmNum.length;i++) 
-      finalPass.push(rdmNum[i])
-      console.log(finalPass)
+      for (var i = 0; i < rdmNum.length;i++) {
+      finalPass.push(rdmNum[i]) 
+      }
+      // console.log(finalPass)
 
     }
+
+  //     var i;
+  // for (i = 0; i < cars.length; i++) {
+  //   text += cars[i] + "<br>";
+  // }
 
     // for ( i = 0; i < pwdLength; i++) { 
     //   pwdLength.push(finalPass)
@@ -60,14 +70,15 @@ var passGen = []
       
       
 
-      // for( i = 0; i <finalPass.length; i++){
-      //   var userPassword = Math.floor(Math.random()*finalPass.length);
-      //   console.log(userPassword)
-      // }
-
-      let passChar = pwdLength[Math.floor(Math.random() * pwdLength.length)];
+    for(var i = 0; i <pwdLength; i++){
+     var randChar = finalPass[Math.floor(Math.random()*finalPass.length)]
+     passGen = passGen + randChar
      
-// }
+    }
+
+      
+   return passGen  
+}
 
       
 
@@ -75,6 +86,6 @@ var passGen = []
  
 
 // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
 
 
