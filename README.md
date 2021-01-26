@@ -26,7 +26,7 @@ Users choose if they want to include, uppercase, lowercase, numbers, and selecte
 
 
 ### 2. Installation {#installation}
-You will need to clone/fork the repository. To do this you will need to open the code repository and open in the broswer. From their the app will run and you justy need to follow the prompts!
+You will need to clone/fork the repository. To do this you will need to open the code repository and open in the broswer. To do this, right click on the html "index file" in the code editor. Select the open in default browser option and you will see the generator landing page. Just click the "generate password" button and from their the app will run and you justy need to follow the prompts!
 
 ### 3. Usage {#usage}
 This is meant to be used by anyone who needs to create random passwords.
