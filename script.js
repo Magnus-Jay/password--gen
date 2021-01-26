@@ -58,16 +58,6 @@ function generatePassword() {
       // console.log(finalPass)
 
     }
-
-  //     var i;
-  // for (i = 0; i < cars.length; i++) {
-  //   text += cars[i] + "<br>";
-  // }
-
-    // for ( i = 0; i < pwdLength; i++) { 
-    //   pwdLength.push(finalPass)
-    //   console.log(pwdLength)
-      
       
 
     for(var i = 0; i <pwdLength; i++){
