@@ -54,3 +54,5 @@ GitHub Username: Magnus-Jay
 GitHub Link: https://github.com/Magnus-Jay/password--gen
 
 Email: magnus86@uw.edu
+
+![](images/passGen.png)
